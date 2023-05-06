@@ -1,0 +1,72 @@
+<div class="containers">
+  <div class="content" >
+    <div class="ticketDetails" >
+      <h3>Ticket ID :-</h3>
+      <h3>{{ ticketdata?.id }}</h3>
+    </div>
+    <div class="ticketDetails" >
+      <h3>CIC ID :-</h3>
+      <h3>{{ ticketdata?.CIC_ID }}</h3>
+    </div>
+
+  
+    <div class="ticketDetails" >
+      <h3>Engineer Name :-</h3>
+      <h3>{{ ticketdata?.Engineer_Name }}</h3>
+    </div>
+
+    <div class="ticketDetails">
+      <h3>Issue Type :-</h3>
+      <h3>{{ ticketdata?.Issues }}</h3>
+    </div>
+
+    <div class="ticketDetails">
+      <h3>Isue Description :-</h3>
+      <h3>{{ ticketdata?.Issues_Dec }}</h3>
+    </div>
+   
+    <div class="ticketDetails">
+      <h3>Additional Info :-</h3>
+      <h3>{{ ticketdata?.Additional_Info }}</h3>
+    </div>
+
+    <div>
+      <span>
+        Follow Up :
+        <textarea name="" id="" cols="55" rows="4"></textarea>
+        <textarea name="" id="" cols="55" rows="4"></textarea>
+      </span>
+
+      <button class="flwBtn" mat-raised-button (click)=" addFollowUp()" >Add Follow Up</button>
+    </div>
+    <div class="button">
+      <button mat-dialog-close="" mat-raised-button color="primary">
+        cancle
+      </button>
+      <button mat-raised-button color="primary">Save</button>
+    </div>
+  </div>
+</div>
+
+<div class="FollowUp" *ngIf="false">
+  <div class="text">
+    <span>
+      Follow Up :
+      <textarea name="" id="" cols="50" rows="10"></textarea>
+    </span>
+    <mat-form-field appearance="fill">
+            <mat-label>Verbose datepicker</mat-label>
+            <input matInput [matDatepicker]="dp" >
+            <mat-hint>MMMM DD, YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="dp"></mat-datepicker-toggle>
+            <mat-datepicker #dp></mat-datepicker>
+          </mat-form-field>
+      
+    <button class="flwBtn" mat-raised-button>Save</button>
+  </div>
+</div>
+
+
+<div>
+
+</div>

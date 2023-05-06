@@ -1,0 +1,37 @@
+<div class="form" *ngIf="toggler == true">
+  <form class="login-form" [formGroup]="User" (ngSubmit)="addUser()">
+    <mat-form-field appearance="outline">
+      <mat-label>Name</mat-label>
+      <input matInput formControlName="name" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Password</mat-label>
+      <input matInput formControlName="password" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Select Role</mat-label>
+      <mat-select disableRipple formControlName="SelectRoll">
+        <mat-option *ngFor="let sel of SelectRoll" [value]="sel">{{sel}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button type="submit">Add</button>
+  </form>
+</div>
+
+<div class="form" *ngIf="toggler == false">
+  <form class="login-form" [formGroup]="User" (ngSubmit)="updateUser()">
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Password</mat-label>
+      <input matInput formControlName="password" />
+    </mat-form-field>
+    <button type="submit" mat-dialog-close>Add</button>
+  </form>
+</div>

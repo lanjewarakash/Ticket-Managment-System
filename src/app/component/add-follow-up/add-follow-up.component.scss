@@ -1,0 +1,30 @@
+
+.example-full-width {
+  width: 50%;
+
+  margin-left: 150px;
+}
+
+textarea {
+  border-radius: 20%;
+}
+
+
+.content {
+  width: 45%;
+  margin-left: 300px;
+
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  padding: 10px;
+  background-image: linear-gradient(#e4e1e1, white, #618e63);
+  border-radius: 10px;
+}
+
+button {
+  border-radius: 10px;
+  padding: 20px;
+  width: 25%;
+  float: right;
+}

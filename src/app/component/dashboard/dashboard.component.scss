@@ -1,0 +1,27 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+mat-toolbar {
+  background: #4caf50;
+}
+
+.example-container {
+  width: 1280px;
+  height: 537px;
+  border: 1px solid #618e63;
+  background-image: linear-gradient(#e4e1e1, white,);
+}
+
+.example-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  // background-image: linear-gradient(#e4e1e1, white, #618e63);
+}
+
+.example-sidenav {
+  padding: 20px;
+  background-image: linear-gradient(#e4e1e1, white, #618e63);
+}

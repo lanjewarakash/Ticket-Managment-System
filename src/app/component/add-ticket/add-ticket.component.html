@@ -1,0 +1,30 @@
+
+<div class="form">
+  <form class="login-form" [formGroup]="ticket" (ngSubmit)="addTicket()">
+    <mat-form-field appearance="outline">
+      <mat-label>CIC ID</mat-label>
+      <input matInput formControlName="CIC_ID" spellcheck="true" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Engineer Name</mat-label>
+      <input matInput formControlName="Engineer_Name" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Select Issue Type</mat-label>
+      <mat-select disableRipple formControlName="Issue">
+        <mat-option *ngFor="let sel of Issues" [value]="sel">{{ sel }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Issue Decription</mat-label>
+      <input matInput formControlName="Issue_Dec" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Additional information</mat-label>
+      <input matInput formControlName="Additional_Info" />
+    </mat-form-field>
+
+    <button type="submit">Add Ticket</button>
+  </form>
+</div>

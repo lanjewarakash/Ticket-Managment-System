@@ -1,0 +1,7 @@
+<div class="logout" *ngIf="logout">
+<div mat-dialog-content>Are you sure to logout?</div>
+<div mat-dialog-actions>
+  <button  mat-button mat-dialog-close>NO</button>
+  <button routerLink="/login" color="warn" mat-button mat-dialog-close cdkFocusInitial>OK</button>
+</div>
+</div>

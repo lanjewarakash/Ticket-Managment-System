@@ -1,0 +1,45 @@
+
+<div class="addUsesbtn">
+    <button mat-raised-button  color="warn" (click)="addUserInfo()">Add Users</button>
+</div>
+<mat-form-field   id="Search" appearance="outline">
+  <mat-icon id="icon" >search</mat-icon>
+  <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Ram" #input class="Searc">
+</mat-form-field> 
+
+<div class="mat-elevation-z8">
+    <table mat-table matSort [dataSource]="dataSource">
+
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+        <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
+        <td mat-cell *matCellDef="let row"> {{row.email}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="SelectRoll">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Roll </th>
+        <td mat-cell *matCellDef="let row"> {{row.SelectRoll}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
+        <td mat-cell *matCellDef="let row"> 
+          <button mat-icon-button color="primary" (click)="changeUserPassInfo(row)" ><mat-icon >password</mat-icon> </button>
+          <button mat-icon-button color="warn" (click)="deleteUserInfo(row.id)" ><mat-icon>delete </mat-icon></button> </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  
+      <!-- Row shown when there is no matching data. -->
+      <!-- <tr class="mat-row" *matNoDataRow>
+        <td class="mat-cell" colspan="4"></td>
+      </tr> -->
+    </table>
+
+
+</div>

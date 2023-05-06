@@ -1,0 +1,19 @@
+<div class="body">
+  <div class="login-page">
+    <div class="form">
+      <form [formGroup]="login" (ngSubmit)="onLogin()">
+        <mat-form-field appearance="outline">
+          <mat-icon>email</mat-icon>
+          <input matInput placeholder="Email" formControlName="email" />
+          <mat-error>Please Enter Email ID</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-icon>lock</mat-icon>
+          <input matInput placeholder="Password" formControlName="password" />
+          <mat-error>Please Enter Password</mat-error>
+        </mat-form-field>
+        <button type="submit">login</button>
+      </form>
+    </div>
+  </div>
+</div>

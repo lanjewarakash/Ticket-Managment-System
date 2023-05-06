@@ -1,0 +1,52 @@
+.containers{
+    width: 470px;
+    height: 550px;
+    // padding-left: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.content{
+    width: 420px;
+    // padding-left: 20px;
+    // padding-right: 20px;
+    // padding-top: 0%;
+    // padding-bottom: 0%;
+    padding: 20px;
+    height: 600px;
+    border: double black 2px;
+
+}
+.flwBtn{
+  float: right;
+  background: #4caf50;
+  color: white;
+}
+.button{
+    margin-top: 55px;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+textarea{
+    border-radius: 50px
+}
+
+.FollowUp{
+    width: 400px;
+    height: 300px;
+    padding: 20px;
+}
+
+.text{
+    border: double black 2px;
+    height: 300px;
+
+}
+
+.ticketDetails{
+    display: flex; 
+    justify-content: space-between;
+}

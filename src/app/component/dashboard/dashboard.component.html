@@ -1,0 +1,37 @@
+<mat-toolbar>
+  <button (click)="drawer.toggle()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon></button>
+  <span>Ticket Management</span>
+  <span class="example-spacer"></span>
+  <button mat-icon-button  (click)="openDialog()"  class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" >
+    <mat-icon>logout</mat-icon>
+    
+  </button>
+</mat-toolbar>
+
+
+<mat-drawer-container
+  class="example-container" autosize style="display: flex; flex-direction: column ">
+  <mat-drawer #drawer class="example-sidenav" mode="side" style="display: flex; flex-direction: column">
+    <div>
+      <button style="border: 0; background-color: #eee8e8">
+        <mat-icon>account_circle</mat-icon>
+        <p>Admin</p>
+        <p>Admin@gmail.com</p>
+        
+      </button>
+    
+    </div>
+    <hr>
+    <div style="padding: 10px">
+      <button routerLink="/dashboard/home" mat-raised-button >Home</button>
+    </div>
+    <div style="padding: 10px" *ngIf="user">
+      <button routerLink="/dashboard/users"  mat-raised-button *ngIf="roll"  >Users</button>
+    </div>
+    <div style="padding: 10px">
+      <button routerLink="/dashboard/tickets" mat-raised-button >Tickets</button>
+    </div>
+  </mat-drawer>
+  <router-outlet></router-outlet>
+  </mat-drawer-container>
